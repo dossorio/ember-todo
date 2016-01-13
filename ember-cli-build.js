@@ -7,6 +7,8 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  var fontsDir = 'fonts/';
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
@@ -19,6 +21,14 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
+
+  app.import('bower_components/font-awesome/css/font-awesome.css');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', {destDir: fontsDir});
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {destDir: fontsDir});
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', {destDir: fontsDir});
 
   return app.toTree();
 };
