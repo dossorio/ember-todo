@@ -11,9 +11,9 @@
         </div>
         <div class="panel-body">
           <ul class="list-group">
-            <li class="list-group-item">Buy bread</li>
-            <li class="list-group-item">Be a better developer</li>
-            <li class="list-group-item">Learn emberjs</li>
+            {{#each model as |todo|}}
+              <li class="list-group-item">{{todo.desc}}</li>
+            {{/each}}
           </ul>
           <div class="text-center">
             <button class="btn btn-info"><i class="fa fa-plus"></i></button>
