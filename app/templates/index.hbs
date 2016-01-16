@@ -11,9 +11,9 @@
         </div>
         <div class="panel-body">
           <ul class="list-group">
-            {{debug model}}
             {{#each model as |todo|}}
-              <li class="list-group-item">{{todo.desc}}</li>
+              {{debug todo}}
+              <li class="list-group-item">{{todo.id}} - {{todo.desc}}</li>
             {{/each}}
           </ul>
           <div class="text-center">

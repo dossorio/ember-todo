@@ -2,7 +2,7 @@ export default function() {
 
   this.get('/todos', function() {
     return {
-      data: [{
+      todos: [{
         type: 'todo',
         id: 1,
         attributes: {
