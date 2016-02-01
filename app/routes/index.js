@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(){
+  model() {
+    console.log(this.store);
     return this.store.findAll('todo');
   },
 });

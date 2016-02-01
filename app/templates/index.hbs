@@ -12,8 +12,7 @@
         <div class="panel-body">
           <ul class="list-group">
             {{#each model as |todo|}}
-              {{debug todo}}
-              <li class="list-group-item">{{todo.id}} - {{todo.desc}}</li>
+              <li class="list-group-item">{{todo.id}} - {{todo.description}}</li>
             {{/each}}
           </ul>
           <div class="text-center">

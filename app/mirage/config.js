@@ -1,27 +1,26 @@
 export default function() {
-
   this.get('/todos', function() {
     return {
-      todos: [{
-        type: 'todo',
+      data: [{
+        type: 'todos',
         id: 1,
         attributes: {
-          desc: 'Buy bread',
+          description: 'Buy bread',
           done: false
         }
       }, {
-        type: 'todo',
+        type: 'todos',
         id: 2,
         attributes: {
-          desc: 'Be a better developer',
+          description: 'Be a better developer',
           done: false
         }
       }, {
-        type: 'todo',
+        type: 'todos',
         id: 3,
         attributes: {
-          desc: 'Learn emberjs',
-          done: false
+          description: 'Learn emberjs',
+          done: true
         }
       }]
     };
