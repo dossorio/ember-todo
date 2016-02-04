@@ -5,21 +5,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">Your Todos</h3>
-        </div>
-        <div class="panel-body">
-          <ul class="list-group">
-            {{#each model as |todo|}}
-              <li class="list-group-item">{{todo.id}} - {{todo.description}}</li>
-            {{/each}}
-          </ul>
-          <div class="text-center">
-            <button class="btn btn-info"><i class="fa fa-plus"></i></button>
-          </div>
-        </div>
-      </div>
+      {{todo-ul-list todos=model}}
     </div>
   </div>
 </div>
