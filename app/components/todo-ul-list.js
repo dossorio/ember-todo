@@ -5,5 +5,9 @@ export default Ember.Component.extend({
     addTodo() {
       console.log($(this.element).find('ul'));
     }
+    ,
+    autoFilter(filter) {
+      console.log(filter);
+    }
   }
 });
