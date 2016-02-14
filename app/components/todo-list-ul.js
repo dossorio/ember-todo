@@ -12,8 +12,14 @@ export default Ember.Component.extend({
   }),
   actions: {
     todos: [],
-    addTodo() {
-      console.log(Ember);
+    addTodo(todo, e) {
+      if (e && e.which == 13) {
+          this.todos.store.createRecord('todo', {
+            description: todo,
+            done: false
+          });
+          $(e.target).val('');
+      }
     },
     autoFilter(filter) {
       this.get('todoViews').forEach(function(todoView){

@@ -17,11 +17,11 @@
         {{todo-list-elem todo=todo}}
       {{/each}}
       <li class="list-group-item">
-        {{input value=newTodo class="form-control text-center" placeholder="write something..."}}
+        {{input value=newTodo class="form-control text-center" placeholder="write something..." key-up=(action 'addTodo')}}
       </li>
     </ul>
     <div class="text-center">
-      <button {{action "addTodo"}} class="btn btn-info"><i class="fa fa-plus"></i></button>
+      <button {{action "addTodo" "addButton"}} class="btn btn-info"><i class="fa fa-plus"></i></button>
     </div>
   </div>
 </div>
