@@ -16,9 +16,9 @@ export default Ember.Component.extend({
       console.log($(this.element).find('ul'));
     },
     autoFilter(filter) {
-      console.log(filter);
-      console.log(this.get('todoViews'));
-      this.get('todoViews');
+      this.get('todoViews').forEach(function(todoView){
+        todoView.set('isHidden', todoView.todo.get('description').toLowerCase().indexOf(filter.toLowerCase()) == -1);
+      });
     }
   }
 });
