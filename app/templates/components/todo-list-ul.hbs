@@ -9,13 +9,16 @@
           <label class="sr-only" for="filter">Filter Todos</label>
           <div class="input-group">
             <div class="input-group-addon"><i class="fa fa-search"></i></div>
-            {{input value=filter class="form-control" id=filter key-up=(action 'autoFilter' filter)}}
+            {{input value=filter class="form-control" key-up=(action 'autoFilter' filter)}}
           </div>
         </div>
       </li>
       {{#each todos as |todo|}}
         {{todo-list-elem todo=todo}}
       {{/each}}
+      <li class="list-group-item">
+        {{input value=newTodo class="form-control text-center" placeholder="write something..."}}
+      </li>
     </ul>
     <div class="text-center">
       <button {{action "addTodo"}} class="btn btn-info"><i class="fa fa-plus"></i></button>

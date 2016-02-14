@@ -13,7 +13,7 @@ export default Ember.Component.extend({
   actions: {
     todos: [],
     addTodo() {
-      console.log($(this.element).find('ul'));
+      console.log(Ember);
     },
     autoFilter(filter) {
       this.get('todoViews').forEach(function(todoView){
