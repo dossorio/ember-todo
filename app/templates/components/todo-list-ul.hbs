@@ -14,7 +14,7 @@
         </div>
       </li>
       {{#each todos as |todo|}}
-        <li class="list-group-item">{{todo.id}} - {{todo.description}}</li>
+        {{todo-list-elem todo=todo}}
       {{/each}}
     </ul>
     <div class="text-center">
