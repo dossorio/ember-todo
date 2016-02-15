@@ -6,11 +6,5 @@ export default Ember.Component.extend({
   classNameBindings: ['isHidden:hide'],
   isHidden: false,
   actions: {
-    hide() {
-      this.set('isHidden', true)
-    },
-    show() {
-      this.set('isHidden', false)
-    }
   }
 });
